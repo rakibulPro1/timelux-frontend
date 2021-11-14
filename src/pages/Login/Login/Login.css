@@ -1,0 +1,17 @@
+.login-box {
+  background-color: #f3f3f3;
+  padding: 60px 40px;
+  width: 50%;
+  border-radius: 5%;
+}
+.login-form {
+  margin-top: 50px;
+  background-color: white;
+  padding: 40px 20px;
+}
+
+@media only screen and (max-width: 780px) {
+  .login-box {
+    width: 80%;
+  }
+}
