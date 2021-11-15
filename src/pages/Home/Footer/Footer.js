@@ -7,7 +7,7 @@ import footerImg2 from "../../../images/watches/watch-3.jpg";
 const Footer = () => {
   return (
     <Container>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} mt={5} mb={3}>
         <Grid item sm={12} md={4}>
           <h2 style={{ fontWeight: "bold", marginBottom: "10px" }}>TimeLux</h2>
           <p style={{ fontWeight: "bold", marginBottom: "1px" }}>Address</p>

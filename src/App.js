@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import Footer from "./pages/Home/Footer/Footer";
-import Header from "./pages/Home/Header/Header";
+import PrivateRoute from "../src/pages/Login/PrivateRoute/PrivateRoute";
 import Home from "./pages/Home/Home/Home";
 import Products from "./pages/Home/Products/Products";
 import Purchage from "./pages/Home/Purchage/Purchage";
 import Login from "./pages/Login/Login/Login";
 import NotFound from "./pages/NotFound/NotFound";
 import Register from "./pages/Login/Register/Register";
+import Menubar from "./pages/Home/Menubar/Menubar";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
             <Home></Home>
           </Route>
           <Route path="/login">
@@ -29,15 +33,15 @@ function App() {
             <Dashboard></Dashboard>
           </Route>
           <Route path="/explore">
-            <Header></Header>
+            <Menubar></Menubar>
             <Products></Products>
             <Footer></Footer>
           </Route>
-          <Route path="/purchage/:id">
-            <Header></Header>
+          <PrivateRoute path="/purchage/:id">
+            <Menubar></Menubar>
             <Purchage></Purchage>
             <Footer></Footer>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
