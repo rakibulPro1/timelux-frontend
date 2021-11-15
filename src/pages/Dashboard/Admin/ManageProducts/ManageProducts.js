@@ -1,4 +1,4 @@
-import { Chip, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
@@ -8,6 +8,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import DeleteIcon from "@mui/icons-material/Delete";
+import SystemUpdateAltTwoToneIcon from "@mui/icons-material/SystemUpdateAltTwoTone";
+import { Link } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -96,13 +99,17 @@ const ManageProducts = () => {
                 <StyledTableCell align="left">
                   <h2 style={{ fontWeight: "bold" }}>${product.price}</h2>
                 </StyledTableCell>
-                <StyledTableCell align="left">
-                  <Chip
-                    label="Delete"
+                <StyledTableCell align="left" sx={{ displa: "flex" }}>
+                  <DeleteIcon
+                    sx={{ fontSize: "30px", color: "#c62828" }}
                     onClick={() => {
                       handleDelete(product._id);
                     }}
-                  />
+                  ></DeleteIcon>
+                  <SystemUpdateAltTwoToneIcon
+                    as={Link}
+                    to="/update"
+                  ></SystemUpdateAltTwoToneIcon>
                 </StyledTableCell>
               </StyledTableRow>
             ))}

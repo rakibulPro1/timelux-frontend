@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import useAuth from "../../../../hooks/useAuth";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -102,12 +103,12 @@ const MyOrders = () => {
                   </h2>
                 </StyledTableCell>
                 <StyledTableCell align="left">
-                  <Chip
-                    label="Delete"
+                  <DeleteIcon
+                    sx={{ fontSize: "30px", color: "#c62828" }}
                     onClick={() => {
                       handleDelete(order._id);
                     }}
-                  />
+                  ></DeleteIcon>
                 </StyledTableCell>
               </StyledTableRow>
             ))}
