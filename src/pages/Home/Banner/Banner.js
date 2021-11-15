@@ -19,7 +19,14 @@ const Banner = () => {
       sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
       <div>
-        <h2 style={{ fontSize: "50px", letterSpacing: "3px", color: "white" }}>
+        <h2
+          style={{
+            fontSize: "42px",
+            letterSpacing: "3px",
+            color: "white",
+            fontFamily: "'Pacifico', cursive",
+          }}
+        >
           The Watch Everyone Desires
         </h2>
         <p

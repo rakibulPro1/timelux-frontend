@@ -11,7 +11,6 @@ import { Avatar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import LogoutIcon from "@mui/icons-material/Logout";
-import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import WatchIcon from "@mui/icons-material/Watch";
 
 const Menubar = () => {
@@ -139,7 +138,8 @@ const Menubar = () => {
                 justifyContent: "center",
               }}
             >
-              <WatchIcon sx={{ fontSize: "38px" }} /> <span>TimeLux</span>
+              <WatchIcon sx={{ fontSize: "38px" }} />{" "}
+              <span style={{ fontSize: "25px" }}>TimeLux</span>
             </Box>
           </Typography>
           <Box sx={{ flexGrow: 1 }} />

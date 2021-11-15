@@ -1,15 +1,29 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import footerImg1 from "../../../images/watches/watch-2.jpg";
 import footerImg2 from "../../../images/watches/watch-3.jpg";
+import WatchIcon from "@mui/icons-material/Watch";
 
 const Footer = () => {
   return (
     <Container>
       <Grid container spacing={2} mt={5} mb={3}>
         <Grid item sm={12} md={4}>
-          <h2 style={{ fontWeight: "bold", marginBottom: "10px" }}>TimeLux</h2>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "start",
+            }}
+          >
+            <WatchIcon sx={{ fontSize: "38px" }} />{" "}
+            <span
+              style={{ fontSize: "25px", fontFamily: "'Pacifico', cursive" }}
+            >
+              TimeLux
+            </span>
+          </Box>
           <p style={{ fontWeight: "bold", marginBottom: "1px" }}>Address</p>
           <p style={{ fontWeight: "bold", marginBottom: "1px" }}>
             Anowara, chattagram, 27no road

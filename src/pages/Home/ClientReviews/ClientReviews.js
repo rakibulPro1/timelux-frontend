@@ -16,7 +16,13 @@ const ClientReviews = () => {
       <Typography
         variant="h4"
         color="info.main"
-        sx={{ textAlign: "center", fontWeight: "bold", mt: 4, mb: 5 }}
+        sx={{
+          textAlign: "center",
+          fontFamily: "'Pacifico', cursive",
+          fontWeight: "bold",
+          mt: 4,
+          mb: 5,
+        }}
       >
         Client Reviews
       </Typography>
